@@ -1,17 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Venom</title>
 </head>
-<body>
+<body class="blood">
   <div class="container">
     <header class="header">
       <a href="" class="logo-link">
@@ -37,17 +36,29 @@
 
     <div class="film">
       <div class="film-text">
-      <span class="film-date">
-        16 сентября 20201
-      </span>
+        <span class="film-date">
+          16 сентября 20201
+        </span>
         <img src="img/venom-2.svg" alt="" class="film-logo">
+        <p class="film-description">В настырном журналисте по-прежнему живет симбиот.
+          Том Харди в образе обаятельного суперзлодея  из омиксов Marvel.</p>
       </div>
-      <p class="film-description">В настырном журналисте по-прежнему живет симбиот.  
-        Том Харди в образе обаятельного суперзлодея  из комиксов Marvel.</p>
+      <div class="button-group">
+        <button class="button button-primary">
+          <img width="15px" src="img/play.svg" alt="icon: play" class="button-icon">
+          <span class="button-text">смотреть трейлер</span>
+        </button>
+        <a href="trailer.html" class="button button-link">
+          <img width="15px" src="img/ticket.svg" alt="icon: ticket" class="button-icon">
+          <span class="button-text">билеты не премьеру</span>
+        </a>
+      </div>
+      <!-- /.botton-group -->
     </div>
-    <!-- /.hero -->
+    <!-- /.film -->
   </div>
   <!-- /.container -->
+  <img src="img/venom.png" alt="photo: venom" class="venom">
 
 </body>
 </html>
