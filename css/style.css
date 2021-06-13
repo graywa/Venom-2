@@ -14,13 +14,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 .container {
     max-width: 1140px;
+    width: 90%;
     margin: auto;
 }
+
+/*Header*/
 .header {
     display: flex;
     align-items: center;
-    padding-top: 40px;
-    margin-bottom: 80px;
+    padding-top: 2%;
+    margin-bottom: 7%;
 }
 .logo-link {
     display: inline-block;
@@ -31,6 +34,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     list-style: none;
     display: flex;
+}
+.menu-close {
+    display: none;
+}
+.menu-button {
+    display: none;
 }
 .nav-menu-item {
     margin-right: 30px;
@@ -43,17 +52,21 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     font-size: 24px;
     line-height: 28px;
-    margin-bottom: 40px;
+    margin-bottom: 3%;
+    opacity: .8;
+}
+.film-logo {
+    width: 70%;
 }
 .film-description {
-    margin-top: 40px;
+    margin-top: 3%;
     max-width: 423px;
     font-size: 16px;
     line-height: 140%;
     opacity: .8;
 }
 .button-group {
-    margin-top: 70px;
+    margin-top: 5%;
 }
 .button {
     padding: 15px 30px;
@@ -78,15 +91,19 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #fff;
 }
 .button-link {
-    color: white;
+    color: #ffffff;
+    cursor: pointer;
 }
 .venom {
+    width: 50%;
+    max-width: 800px;
     position: absolute;
-    top: 0;
+    top: 10%;
     right: 0;
+
 }
 .blood {
-    background: url("../img/bllood.png") no-repeat top right, #14131A url("../img/background.jpg") no-repeat center/100%;
+    background: url("../img/bllood.png") no-repeat top 50px right/70%, #14131A url("../img/background.jpg") no-repeat center/90%;
 }
 
 /*about*/
@@ -126,7 +143,7 @@ h1, h2, h3, h4, h5, h6 {
     column-count: 2;
     column-gap: 60px;
     max-width: 330px;
-    margin-bottom: 35px;
+    margin-bottom: 3%;
 }
 .content .trailer {
     width: 356px;
@@ -144,7 +161,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 50%;
     cursor: pointer;
 }
-.trailer .play-icon {
+.play-icon {
     transform: translate(1px, 2px);
 }
 .poster-wrapper {
@@ -165,5 +182,108 @@ h1, h2, h3, h4, h5, h6 {
 .poster {
     width: 362px;
     border-radius: 5px;
+}
+@media (max-width: 1076px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .col {
+        margin-bottom: 10%;
+    }
+}
+@media (max-width: 767px) {
+
+}
+@media (max-width: 560px) {
+    .col {
+        width: 100%;
+    }
+    .nav {
+        margin-left: auto;
+    }
+    .menu-close {
+        position: fixed;
+        top: 40px;
+        right: 25px;
+        display: flex;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        color: white;
+        z-index: 9;
+        cursor: pointer;
+        transform: translateX(200%);
+        transition: .4s;
+        opacity: .8;
+    }
+    .menu-close-text {
+        margin-right: 10px;
+    }
+    .nav-menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 8;
+        background-color: #14131a;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.7;
+        font-size: 24px;
+        transform: translateX(100%);
+        transition: .2s;
+    }
+    .is-active {
+        transform: translateX(0);
+    }
+    .nav-menu-item {
+        margin: 0;
+    }
+    .menu-button {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0);
+        color: rgba(255, 255, 255, 0.8);
+        border: 0;
+        cursor: pointer;
+    }
+    .menu-button-text {
+        margin-right: 10px;
+    }
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .button-primary {
+        margin: 0;
+    }
+    .film-description {
+        margin-bottom: 40px;
+        max-width: 330px;
+        width: 100%;
+    }
+    .poster-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .creators {
+        margin-top: 5%;
+        text-align: center;
+    }
+    .content .trailer {
+        max-width: 356px;
+        width: 100%;
+    }
+    .poster {
+        max-width: 362px;
+        width: 100%;
+    }
+    .list-double {
+        column-count: 1;
+    }
 }
 
